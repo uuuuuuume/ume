@@ -70,7 +70,7 @@ def btnEvent1():
             messagebox.showinfo("로그인 성공", "학생 로그인 성공")
             JJ2.destroy()
         
-###(메인화면에 들어있는 화면)(성현)
+###(메인화면에 들어있는 화면)
            #학생 기능 화면 코드
             STDfunc = Tk()
             STDfunc.title("학생 기능")
@@ -91,11 +91,11 @@ def btnEvent1():
             STDbtn5 = Button(STDfunc)
             STDbtn5.config(text = '공지 확인하기', width = 20, command = main4)
             STDbtn5.grid(row = 0, column = 1, padx = 100, pady = 30)
-            #윤관
+   
             STDbtn6 = Button(STDfunc)
             STDbtn6.config(text = '전주대학교 지도 보기', width = 20, command = main6)
             STDbtn6.grid(row = 1, column = 1, padx = 100, pady = 30)
-            #윤관
+       
             STDbtn7 = Button(STDfunc)
             STDbtn7.config(text = '과제 제출하기', width = 20, command = main2)
             STDbtn7.grid(row = 2, column = 1, padx = 100, pady = 30)
@@ -168,8 +168,6 @@ def btnEvent2():
     btn2.pack()
     JJ3.mainloop()
 
-
- ###성현(메인화면)
 #메인화면 코드
 JJ1 = Tk()
 JJ1.title("JJ 학생 교수 교류앱")
@@ -183,8 +181,6 @@ btn2 = Button(frame, text = '교수', command = btnEvent2, width = 20)
 btn2.pack(side = 'right')
 frame.pack(side = 'top')
 
-
-###성현
 #도서관 메인 화면
 def LB():
     JJ5 = Toplevel()
@@ -195,10 +191,7 @@ def LB():
     btn2 = Button(JJ5, text = "도서관 자리 예약하기", command = open_reservation ,width = 20 )
     btn2.pack(side = 'right')
 
-
-###성현
 #도서관 게시판 이용 화면
-
 def openpost():
     global IDentry, NAMEentry, CONTENTentry, display_area  
 
@@ -247,7 +240,6 @@ def clear_entries():
     NAMEentry.delete(0, END)
     CONTENTentry.delete(0, END)
 
-###성현
 #도서관 자리 예약 프로그램
 def open_reservation():
     res_root = Toplevel(JJ1)
@@ -306,11 +298,7 @@ def cancel(seat, seats):
         btn.config(command=lambda s=seat: reser_button(s, seats))
         messagebox.showinfo("예약 취소", f"{seat} 자리 예약이 취소되었습니다.")
 
-
-
-###유나 (자기계발기능)
 #자기계발
-
 def main():  # 학과 챌린지 및 데이터 초기화
     context = {"departments": {"반려동식물학과": ["식물 기르기", "유기견 봉사활동", "애완동물 훈련", "정원 가꾸기", "동물과 교감"],
             "경영학과": ["한 달 자금 관리", "마케팅 계획 작성", "경영 관련 책 읽기", "기업가 정신 워크샵 참석", "CEO 강연 듣기"],
@@ -357,7 +345,6 @@ def main():  # 학과 챌린지 및 데이터 초기화
     btn_certify_activity.pack()
     context["btn_certify_activity"] = btn_certify_activity
     
-   
 def random_department(context):  # 학과 추천
     context["currentDepartment"] = random.choice(list(context["departments"].keys()))
     messagebox.showinfo("랜덤 학과 추천", f"추천 학과: {context['currentDepartment']}")
@@ -457,8 +444,6 @@ def get_progress_reward(progress):  # 진행률에 따른 보상 설정
         100: ["연구비용 전액 지원", "해외 학회 참여비 지원", "국제 학술대회 초청권", "전문 프로젝트 참가 기회권 "]}
     return random.choice(rewards.get(progress, ["보상 없음"]))
 
-
-##민석(질문게시판)
 #질문게시판
 questions = []
 tips = []
@@ -525,7 +510,6 @@ def create_main_window():
     # 더블클릭 이벤트 바인딩
     question_listbox.bind('<Double-Button-1>', double_click_question)
 
-    
 # 질문을 리스트박스에 추가하는 함수
 def add_question():
     question_text = question_entry.get()
@@ -687,8 +671,6 @@ def show_question_details():
         if selected_answer:
             answer_listbox.insert(END, selected_answer)
 
-
-###윤관(과제)
 gwandata = {}  # 작성한 내용을 기억합니다.
 yunlist = []  # 교수 창에서 새로 생성되는 버튼을 저장합니다.
 yunlists = []  # 학생 창에서 새로 생성되는 버튼을 저장합니다.
@@ -798,8 +780,6 @@ def main2():
     for i in range(6, 12):
         radiobutton1(gwans, months[i], radios, months[i], 1, i - 6)
 
-
-###윤관 
 # 라디오 버튼을 생성하는 함수
 def radiobutton(plus, txt, vie, vle, row, cln):
     radiobutton = Radiobutton(plus, text=txt, variable=vie, value=vle)
@@ -898,8 +878,6 @@ def main3():
     for i in range(6, 12):
         radiobutton(gwan, months[i], radio, months[i], 1, i - 6)
 
-
-###은율(공지)
 def display_notices():
     try:
         with open("notices.txt", "r") as file:
@@ -934,8 +912,6 @@ def main4():
 
     display_notices()  
 
- 
-###은율
 def add_notice():
     title = entry_title.get()
     content = text_content.get("1.0", "end-1c")
@@ -1017,7 +993,6 @@ def main5():
     btn_modify = Button(root, text="수정", command=modify_notice)
     btn_modify.grid(row=2, column=2, padx=5, pady=5)
 
-###윤관(지도)
 def main6():
     winyun = Toplevel()
     winyun.title("전주대 지도")
@@ -1025,6 +1000,5 @@ def main6():
     lll = Label(winyun, image=img)
     lll.image = img
     lll.pack()
-
 
 JJ1.mainloop()
