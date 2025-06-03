@@ -6,7 +6,6 @@ import random
 #회원가입 정보 딕셔너리
 users = {}
    
-###성현(회원가입 및 로그인기능까지)
 #회원가입 창 코드 
 def rgsEvent1():
     rgs1 = Tk()
