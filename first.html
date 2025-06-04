@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학년별 세부 활동</title>
+    <style>
+        ul {background: lightgray; padding: 6px; margin: 0; list-style-type: none; text-align: center;}
+        li {display: block; padding: 10px 20px;}
+        li a {color: black; text-decoration: none; padding: 5px 10px; display: inline-block;}
+        li a:hover {background: gray; color: white;}
+        .dropdown-content {display: none; position: absolute; background-color: ghostwhite; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                           min-width: 160px; z-index: 1;}
+        .dropdown-content a {display: block; color: black; padding: 12px 16px; text-decoration: none; text-align: left;}
+        .dropdown-content a:hover {background-color: lavender;}
+        .dropdown:hover .dropdown-content {display: block;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="dropdown">
+            <details><summary>1학년</summary>
+                <ul>
+                    <details><summary>1학기</summary>
+                      <li>신입생 멘토링 1차</li>
+                      <li><a href="#personal1">소프트웨어프로젝트1(개인프로젝트)</a></li>
+                      <li><a href="#team">소프트웨어프로젝트1(팀프로젝트)</a></li>
+                      <li>랩실 내 시험 대비 스터디 활동 1차</li>
+                    </details>
+                    <details><summary>2학기</summary>
+                      <li>신입생 멘토링 2차</li>
+                      <li><a href="#datascience">데이터과학입문(프로젝트)</a></li>
+                      <li>랩실 내 시험 대비 스터디 활동 2차</li>
+                      <li>선후배 간 정규교과 학습 모임</li>
+                    </details>
+                    <details><summary>방학(하계, 동계)</summary>
+                      <li>HTMl</li><li>CSS</li><li>Javascript</li><li>C</li><li>토익</li>
+                    </details>
+                </ul>
+            </details>
+        </li>
+        <li class="dropdown">
+            <details><summary>2학년</summary>
+                <ul>
+                    <details><summary>1학기</summary>
+                      <li><a href="#personal2">소프트웨어프로젝트3(개인)</a></li>
+                    </details>
+                    <details><summary>2학기</summary>
+                      <li>미니 프로젝트</li>
+                    </details>
+                    <details><summary>방학(하계, 동계)</summary>
+                      <li>토익</li><li>HTML</li><li>CSS</li><li>Javascript</li>
+                    </details>
+                </ul>
+            </details>
+        </li>
+        <li class="dropdown">
+            <details><summary>3학년</summary>
+                <ul>
+                    <details><summary>1학기</summary>
+                      <li>미정</li>
+                    </details>
+                    <details><summary>2학기</summary>
+                      <li>미정</li>
+                    </details>
+                    <details><summary>방학(하계, 동계)</summary>
+                      <li>취업준비</li><li>개인프로젝트</li><li>팀프로젝트</li><li>대외활동</li>
+                    </details>
+                </ul>
+            </details>
+        </li>
+        <li class="dropdown">
+            <details><summary>4학년</summary>
+                <ul>
+                    <details><summary>1학기</summary>
+                      <li>캡스톤 디자인</li>
+                    </details>
+                    <details><summary>2학기</summary>
+                      <li>취업준비</li>
+                    </details>
+                    <details><summary>방학(하계, 동계)</summary>
+                      <li>HTML</li><li>CSS</li><li>Javascript</li><li>취업준비</li>
+                    </details>
+                </ul>
+            </details>
+        </li>
+    </ul>
+</body>
+</html>
